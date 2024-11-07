@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Ventas</title>
+    <link rel="stylesheet" href="ventas.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../DAVID_WEB_MASCOTAS/imagenes/file (2).jpg" alt="Logo Shoppet">
+    </header>
+
+
+    <h2><a href="../DAVID_WEB_MASCOTAS/DOG/PRINCIPAL/principalDog.html">< SEGUIR COMPRANDO</a></h2>
+    <div class="container">
+        <div class="left">
+            <h2>Datos Personales</h2>
+            <form action="#">
+                <div class="form-group">
+                    <span>Nombre:</span>
+                    <input type="text" placeholder="Ingrese su Nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Apellido:</span>
+                    <input type="text" placeholder="Ingrese su Apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Correo Electrónico:</span>
+                    <input type="email" placeholder="Ingrese su Correo" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Teléfono:</span>
+                    <input type="tel" placeholder="Ingrese su Teléfono" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Dirección:</span>
+                    <input type="text" placeholder="Ingrese su Dirección" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Distrito:</span>
+                    <input type="text" placeholder="Ingrese su Distrito" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Tipo de Documento:</span>
+                    <input type="text" placeholder="Ingrese su Tipo de Documento" required>
+                </div>
+
+                <div class="form-group">
+                    <span>Fecha de Entrega:</span>
+                    <input type="date" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="right">
+            <h2>Información de Venta</h2>
+            <div class="products-total">
+                <div class="product">
+                    <img src="#" alt="Producto 1">
+                    <div class="product-info">
+                        <label for="cantidad1">Cantidad:</label>
+                        <input type="number" id="cantidad1" min="1" value="1" class="quantity-input">
+                        <p>Precio: S/100.00</p>
+                    </div>
+                    <button class="remove-button">Eliminar</button>
+                </div>
+
+                <div class="product">
+                    <img src="#" alt="Producto 2">
+                    <div class="product-info">
+                        <label for="cantidad2">Cantidad:</label>
+                        <input type="number" id="cantidad2" min="1" value="1" class="quantity-input">
+                        <p>Precio: S/150.00</p>
+                    </div>
+                    <button class="remove-button">Eliminar</button>
+                </div>
+
+                <div class="totals">
+                    <div class="total-box">
+                        <p class="discount">Descuento: S/10.00</p>
+                        <p class="shipping">Envío: Gratis</p>
+                        <p class="total">Total: S/140.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-info">
+        <h3>Tipo de Pago</h3>
+        <input type="radio" id="yape" name="pago">
+        <label for="yape">Yape</label><br>
+        
+        <input type="radio" id="paypal" name="pago">
+        <label for="paypal">Paypal</label><br>
+
+        <input type="radio" id="plin" name="pago">
+        <label for="plin">Plin</label><br>
+
+        <input type="radio" id="tarjeta" name="pago">
+        <label for="tarjeta">Tarjeta</label><br>
+
+        <img src="#" alt="Iconos de pago" class="payment-image"><br>
+        <button type="button">Finalizar Compra</button>
+    </div>
+</body>
+</html>

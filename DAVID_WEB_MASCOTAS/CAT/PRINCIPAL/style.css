@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    gap: 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 2s ease;
+}
+
+.logo img:hover {
+    transform: rotateY(360deg);
+}
+
+.buscador {
+    flex: 1;
+    margin: 0 0;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.5rem;
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.icono-usuario,
+.icono-carrito-compra {
+    width: 50px;
+}
+
+.icono-usuario img,
+.icono-carrito-compra img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador {
+        width: 100%;
+        margin: auto 0;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .iconos {
+        gap: 10px;
+    }
+
+    .icono-usuario,
+    .icono-carrito-compra {
+        width: 50px;
+    }
+}
+
+.menu-principal {
+    background-color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.menu-principal li {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+    padding: 10px;
+}
+
+.menu-principal a:hover {
+    text-decoration: underline;
+    color: #1670f7;
+}
+
+@media (max-width: 680px) {
+    .menu-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .menu-principal li {
+        margin: 10px 0;
+    }
+
+    .menu-principal a {
+        padding: 10px 0;
+        width: 100%;
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.imagen-destacada img {
+    width: 100%;
+    animation: zoom 5s ease-in-out infinite;
+}
+
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+.categorias a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.categoria {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.categoria img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+.categoria img:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05); /* Aumenta un poco el tamaño de la imagen al hacer hover */
+}
+
+@media(max-width: 500px){
+    .categorias{
+        flex-direction: column;
+    }
+    .categoria{
+        margin-bottom: 20px;
+    }
+}
+
+.contenedor-principal {
+    width: 80%; /* O el ancho que prefieras */
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    height: 100%; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.productos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Añadido para crear un espacio entre productos */
+}
+
+.producto {
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.producto p {
+    margin: 10px 0;
+}
+
+/* Diseño responsivo */
+@media (max-width: 1200px) {
+    .producto {
+        width: 45%; /* En pantallas medianas, 2 productos por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .producto {
+        width: 100%; /* En pantallas pequeñas, 1 producto por fila */
+    }
+}
+
+.producto button,
+.mostrar-mas button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transición añadida */
+}
+
+.producto button:hover {
+    background-color: #cc0000;
+    /* Color más oscuro al hacer hover */
+    transform: scale(1.05);
+    /* Aumenta el tamaño un poco */
+}
+
+.mostrar-mas {
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes cambioColor {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    animation: cambioColor 3s infinite;
+    /* Aplicar la animación */
+}
+
+.filtros {
+    width: 20%;
+    border-right: 2px solid #ddd;
+    justify-content: start;
+    padding: 10px;
+}
+
+.filtros ul {
+    list-style: none;
+}
+
+.filtros li {
+    margin: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.filtros a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
